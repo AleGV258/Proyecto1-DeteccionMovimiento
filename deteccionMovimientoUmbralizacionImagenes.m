@@ -19,42 +19,43 @@
 %%              1. Substracción                                                      %%
 %%              2. Or                                                                %%
 %%              3. And                                                               %%
-%%  Sigma - Valor de refencia o vector (sigma1, sigma2)                              %%
+%%  Theta - Valor de refencia o vector (Theta1, Theta2)                              %%
 %%  Condición - 1. Mayor o igual, dentro de intervalo                                %%
 %%              2. Menor o igual, fuera de intervalo                                 %%
 %%  Color - Simplemente el color del que se desea pintar el                          %%
 %%          umbralizado de la imagen                                                 %%
 %%                                                                                   %%
 %%  Salidas:                                                                         %%
-%%  G - Imagen 2 marcada con los pixeles de movimiento detectado                     %%
+%%  G - Imagen 2 umbralizada con el movimiento detectado de la                       %%
+%%      imagen 1, según la estrategia utilizada                                      %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Proyecto01_259663_259678_260541
-function [ G ] = deteccionMovimientoUmbralizacionImagenes( I1, I2, Operacion, Sigma, Condicion, Color )
+function [ G ] = deteccionMovimientoUmbralizacionImagenes( I1, I2, Operacion, Theta, Condicion, Color )
     tic;
     %% Detectar el movimiento que tiene
     if ((size(I1, 1) == size(I2, 1)) && (size(I1, 2) == size(I2, 2)))  %% Misma cantidad de renglones y columnas
         if (size(I1, 3) == size(I2, 3)) %% Mismos colores
             switch Operacion %% Selección de la estrategia a utilizar
                 case 1 %% Substracción
-                    IMovimiento = abs(double(I1) - double(I2)); %% Se realiza el absoluto de la resta entre las imágenes
-                    IMovimiento = uint8(IMovimiento);
-                    maximaDif = max(IMovimiento(:));
-                    Sigma = maximaDif * Sigma;
+                    IMovimiento = abs((I1) - (I2));
                 case 2 %% Or
-                    IMovimiento = max(I1, I2);
+                    IMovimiento = max(I1, I2); 
                 case 3 %% And
                     IMovimiento = min(I1, I2);
             end
         end
     end
+    %IMovimiento = uint8(IMovimiento);
+    %maximaDif = max(IMovimiento(:));
+    %Theta = maximaDif * Theta;
 
     %% Umbralizar la imagen resultante del movimiento
     bandIntervalo = false; %% Es un intervalo?
-    Sigma1 = Sigma(1);
-    Sigma2 = 0;
-    if max(size(Sigma))>1 %% Es un intervalo
-        Sigma2 = Sigma(2);
+    Theta1 = Theta(1);
+    Theta2 = 0;
+    if max(size(Theta)) > 1 %% Es un intervalo
+        Theta2 = Theta(2);
         bandIntervalo = true;
     end
     if (size(IMovimiento, 3) > 1) %% Imagen de color
@@ -68,21 +69,21 @@ function [ G ] = deteccionMovimientoUmbralizacionImagenes( I1, I2, Operacion, Si
             valor = IGris(i, j);
             if (bandIntervalo)  %% Intervalo
                 if (Condicion == 1) %% Dentro del intervalo
-                    if ((valor >= Sigma1) && (valor <= Sigma2))
+                    if ((valor >= Theta1) && (valor <= Theta2))
                         IUmbralizada(i, j) = 255;
                     end
                 else  %% Fuera del intervalo
-                    if ((valor < Sigma1) || (valor > Sigma2))
+                    if ((valor < Theta1) || (valor > Theta2))
                         IUmbralizada(i, j) = 255;
                     end
                 end
             else %% Valor
                 if (Condicion == 1) %% Mayor o igual
-                    if (valor >= Sigma1)
+                    if (valor >= Theta1)
                         IUmbralizada(i, j) = 255;
                     end
                 else %% Menor o igual
-                    if (valor <= Sigma1)
+                    if (valor <= Theta1)
                         IUmbralizada(i, j) = 255;
                     end
                 end
