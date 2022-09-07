@@ -14,8 +14,8 @@ clear; %% Limpiar memoria
 close all; %% Cerrar ventanas abiertas
 clc; %% Limpiar consola
 
-RutaIEntrada = 'C:\Users\alegv\Documents\Escuela\Tópico I\MATLAB\Entradas\proyecto\'; %% Ruta de entrada (lectura) de las imágenes
-RutaISalida = 'C:\Users\alegv\Documents\Escuela\Tópico I\MATLAB\Salidas\proyecto\'; %% Ruta de salida (escritura) de las imágenes
+RutaIEntrada = 'C:\entradas\proyecto\'; %% Ruta de entrada (lectura) de las imágenes
+RutaISalida = 'C:\salidas\proyecto\'; %% Ruta de salida (escritura) de las imágenes
 
 I1_1 = imread(strcat(RutaIEntrada, 'par1_frame1.jpg')); %% Par 1 de imágenes, frame 1
 I1_2 = imread(strcat(RutaIEntrada, 'par1_frame2.jpg')); %% Par 1 de imágenes, frame 2
