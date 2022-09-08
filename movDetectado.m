@@ -1,3 +1,15 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Proyecto 1. Nociones básicas de Imágenes                                         %%
+%%  Materia: Tópico 1 (Procesamiento Secuencial de Imágenes usando Matlab)           %%
+%%  Maestra: Sandra Luz Canchola Magdaleno                                           %%
+%%                                                                                   %%
+%%  Grupo: 30 - Semestre: 7mo                                                        %%
+%%  Integrantes:                                                                     %%
+%%   - García Vargas Michell Alejandro - 259663                                      %%
+%%   - Jimenez Elizalde Andres - 259678                                              %%
+%%   - León Paulin Daniel - 260541                                                   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 function [ G ] = movDetectado( IUmbralizada, I2, Color )
     tic;    
     %% Cambiar color del umbralizado para contrastar
@@ -8,6 +20,6 @@ function [ G ] = movDetectado( IUmbralizada, I2, Color )
             end
         end
     end
-    G = uint8(I2);
     toc;
+    G = uint8(I2);
 end

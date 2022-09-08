@@ -1,4 +1,16 @@
-function [ IUmbralizada ] = mov( IMovimiento, Theta, Condicion)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%  Proyecto 1. Nociones básicas de Imágenes                                         %%
+%%  Materia: Tópico 1 (Procesamiento Secuencial de Imágenes usando Matlab)           %%
+%%  Maestra: Sandra Luz Canchola Magdaleno                                           %%
+%%                                                                                   %%
+%%  Grupo: 30 - Semestre: 7mo                                                        %%
+%%  Integrantes:                                                                     %%
+%%   - García Vargas Michell Alejandro - 259663                                      %%
+%%   - Jimenez Elizalde Andres - 259678                                              %%
+%%   - León Paulin Daniel - 260541                                                   %%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+function [ IUmbralizada ] = mov( IMovimiento, Theta, Condicion )
     tic;
     %% Umbralizar la imagen resultante del movimiento
     bandIntervalo = false; %% Es un intervalo?
