@@ -1,13 +1,13 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%  Proyecto 1. Nociones básicas de Imágenes                                         %%
-%%  Materia: Tópico 1 (Procesamiento Secuencial de Imágenes usando Matlab)           %%
+%%  Proyecto 1. Nociones bÃ¡sicas de ImÃ¡genes                                         %%
+%%  Materia: TÃ³pico 1 (Procesamiento Secuencial de ImÃ¡genes usando Matlab)           %%
 %%  Maestra: Sandra Luz Canchola Magdaleno                                           %%
 %%                                                                                   %%
 %%  Grupo: 30 - Semestre: 7mo                                                        %%
 %%  Integrantes:                                                                     %%
-%%   - García Vargas Michell Alejandro - 259663                                      %%
+%%   - GarcÃ­a Vargas Michell Alejandro - 259663                                      %%
 %%   - Jimenez Elizalde Andres - 259678                                              %%
-%%   - León Paulin Daniel - 260541                                                   %%
+%%   - LeÃ³n Paulin Daniel - 260541                                                   %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 function [ IUmbralizada ] = mov( IMovimiento, Theta, Condicion )
@@ -52,6 +52,6 @@ function [ IUmbralizada ] = mov( IMovimiento, Theta, Condicion )
             end
         end
     end
-    toc;
     IUmbralizada = uint8(IUmbralizada);
+    toc;
 end
