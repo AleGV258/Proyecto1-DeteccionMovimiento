@@ -14,8 +14,8 @@ clear; %% Limpiar memoria
 close all; %% Cerrar ventanas abiertas
 clc; %% Limpiar consola
 
-RutaIEntrada = 'C:\Users\danie\Desktop\Proyecto1-DeteccionMovimiento\entradas\'; %% Ruta de entrada (lectura) de las imágenes
-RutaISalida = 'C:\Users\danie\Desktop\Proyecto1-DeteccionMovimiento\salidas\'; %% Ruta de salida (escritura) de las imágenes
+RutaIEntrada = 'C:\(rutaProyecto)\entradas\'; %% Ruta de entrada (lectura) de las imágenes
+RutaISalida = 'C:\(rutaProyecto)\salidas\'; %% Ruta de salida (escritura) de las imágenes
 
 I1_1 = imread(strcat(RutaIEntrada, 'par1_frame1.jpg')); %% Par 1 de imágenes, frame 1
 I1_2 = imread(strcat(RutaIEntrada, 'par1_frame2.jpg')); %% Par 1 de imágenes, frame 2
@@ -38,9 +38,9 @@ iop1_1 = iop(I1_1, I1_2, 1);
 iop1_2 = iop(I1_1, I1_2, 2);
 iop1_3 = iop(I1_1, I1_2, 3);
 
-mov1_1 = mov(iop1_1 ,Theta1, Condicion);
-mov1_2 = mov(iop1_2 ,Theta1, Condicion);
-mov1_3 = mov(iop1_3 ,Theta1, Condicion);
+mov1_1 = mov(iop1_1, Theta1, Condicion);
+mov1_2 = mov(iop1_2, Theta1, Condicion);
+mov1_3 = mov(iop1_3, Theta1, Condicion);
 
 movDetectado1_1 = movDetectado(mov1_1, I1_2, Color);
 movDetectado1_2 = movDetectado(mov1_2, I1_2, Color);
@@ -70,9 +70,9 @@ iop2_1 = iop(I2_1, I2_2, 1);
 iop2_2 = iop(I2_1, I2_2, 2);
 iop2_3 = iop(I2_1, I2_2, 3);
 
-mov2_1 = mov(iop2_1 ,Theta1, Condicion);
-mov2_2 = mov(iop2_2 ,Theta1, Condicion);
-mov2_3 = mov(iop2_3 ,Theta1, Condicion);
+mov2_1 = mov(iop2_1, Theta1, Condicion);
+mov2_2 = mov(iop2_2, Theta1, Condicion);
+mov2_3 = mov(iop2_3, Theta1, Condicion);
 
 movDetectado2_1 = movDetectado(mov2_1, I2_2, Color);
 movDetectado2_2 = movDetectado(mov2_2, I2_2, Color);
@@ -102,9 +102,9 @@ iop3_1 = iop(I3_1, I3_2, 1);
 iop3_2 = iop(I3_1, I3_2, 2);
 iop3_3 = iop(I3_1, I3_2, 3);
 
-mov3_1 = mov(iop3_1 ,Theta1, Condicion);
-mov3_2 = mov(iop3_2 ,Theta1, Condicion);
-mov3_3 = mov(iop3_3 ,Theta1, Condicion);
+mov3_1 = mov(iop3_1, Theta1, Condicion);
+mov3_2 = mov(iop3_2, Theta1, Condicion);
+mov3_3 = mov(iop3_3, Theta1, Condicion);
 
 movDetectado3_1 = movDetectado(mov3_1, I3_2, Color);
 movDetectado3_2 = movDetectado(mov3_2, I3_2, Color);
@@ -134,9 +134,9 @@ iop4_1 = iop(I4_1, I4_2, 1);
 iop4_2 = iop(I4_1, I4_2, 2);
 iop4_3 = iop(I4_1, I4_2, 3);
 
-mov4_1 = mov(iop4_1 ,Theta1, Condicion);
-mov4_2 = mov(iop4_2 ,Theta1, Condicion);
-mov4_3 = mov(iop4_3 ,Theta1, Condicion);
+mov4_1 = mov(iop4_1, Theta1, Condicion);
+mov4_2 = mov(iop4_2, Theta1, Condicion);
+mov4_3 = mov(iop4_3, Theta1, Condicion);
 
 movDetectado4_1 = movDetectado(mov4_1, I4_2, Color);
 movDetectado4_2 = movDetectado(mov4_2, I4_2, Color);
@@ -166,9 +166,9 @@ iop5_1 = iop(I5_1, I5_2, 1);
 iop5_2 = iop(I5_1, I5_2, 2);
 iop5_3 = iop(I5_1, I5_2, 3);
 
-mov5_1 = mov(iop5_1 ,Theta1, Condicion);
-mov5_2 = mov(iop5_2 ,Theta1, Condicion);
-mov5_3 = mov(iop5_3 ,Theta1, Condicion);
+mov5_1 = mov(iop5_1, Theta1, Condicion);
+mov5_2 = mov(iop5_2, Theta1, Condicion);
+mov5_3 = mov(iop5_3, Theta1, Condicion);
 
 movDetectado5_1 = movDetectado(mov5_1, I5_2, Color);
 movDetectado5_2 = movDetectado(mov5_2, I5_2, Color);
@@ -254,9 +254,9 @@ iop1_1_T2 = iop(I1_1, I1_2, 1);
 iop1_2_T2 = iop(I1_1, I1_2, 2);
 iop1_3_T2 = iop(I1_1, I1_2, 3);
 
-mov1_1_T2 = mov(iop1_1_T2 ,Theta2, Condicion);
-mov1_2_T2 = mov(iop1_2_T2 ,Theta2, Condicion);
-mov1_3_T2 = mov(iop1_3_T2 ,Theta2, Condicion);
+mov1_1_T2 = mov(iop1_1_T2, Theta2, Condicion);
+mov1_2_T2 = mov(iop1_2_T2, Theta2, Condicion);
+mov1_3_T2 = mov(iop1_3_T2, Theta2, Condicion);
 
 movDetectado1_1_T2 = movDetectado(mov1_1_T2, I1_2, Color);
 movDetectado1_2_T2 = movDetectado(mov1_2_T2, I1_2, Color);
@@ -282,17 +282,17 @@ subplot(3, 3, 9); imagesc(movDetectado1_3_T2), title('Theta2 - Movimiento detect
 colormap(gray);
 
 %% Operaciones para par 2 de imágenes Theta 2
-iop2_1 = iop(I2_1, I2_2, 1);
-iop2_2 = iop(I2_1, I2_2, 2);
-iop2_3 = iop(I2_1, I2_2, 3);
+iop2_1_T2 = iop(I2_1, I2_2, 1);
+iop2_2_T2 = iop(I2_1, I2_2, 2);
+iop2_3_T2 = iop(I2_1, I2_2, 3);
 
-mov2_1 = mov(iop2_1 ,Theta2, Condicion);
-mov2_2 = mov(iop2_2 ,Theta2, Condicion);
-mov2_3 = mov(iop2_3 ,Theta2, Condicion);
+mov2_1_T2 = mov(iop2_1_T2, Theta2, Condicion);
+mov2_2_T2 = mov(iop2_2_T2, Theta2, Condicion);
+mov2_3_T2 = mov(iop2_3_T2, Theta2, Condicion);
 
-movDetectado2_1 = movDetectado(mov2_1, I2_2, Color);
-movDetectado2_2 = movDetectado(mov2_2, I2_2, Color);
-movDetectado2_3 = movDetectado(mov2_3, I2_2, Color);
+movDetectado2_1_T2 = movDetectado(mov2_1_T2, I2_2, Color);
+movDetectado2_2_T2 = movDetectado(mov2_2_T2, I2_2, Color);
+movDetectado2_3_T2 = movDetectado(mov2_3_T2, I2_2, Color);
 
 figure;
 subplot(1, 2, 1); imagesc(I2_1), title('Imagen I2-1');
@@ -300,17 +300,17 @@ subplot(1, 2, 2); imagesc(I2_2), title('Imagen I2-2');
 colormap(gray);
 
 figure;
-subplot(3, 3, 1); imagesc(iop2_1), title('Theta2 - Substracción entre imágenes I2-1 - I2-2');
-subplot(3, 3, 2); imagesc(mov2_1), title('Theta2 - Umbralización entre imágenes I2-1 - I2-2');
-subplot(3, 3, 3); imagesc(movDetectado2_1), title('Theta2 - Movimiento detectado entre imágenes I2-1 - I2-2');
+subplot(3, 3, 1); imagesc(iop2_1_T2), title('Theta2 - Substracción entre imágenes I2-1 - I2-2');
+subplot(3, 3, 2); imagesc(mov2_1_T2), title('Theta2 - Umbralización entre imágenes I2-1 - I2-2');
+subplot(3, 3, 3); imagesc(movDetectado2_1_T2), title('Theta2 - Movimiento detectado entre imágenes I2-1 - I2-2');
 
-subplot(3, 3, 4); imagesc(iop2_2), title('Theta2 - Operación OR entre imágenes I2-1 - I2-2');
-subplot(3, 3, 5); imagesc(mov2_2), title('Theta2 - Umbralización entre imágenes I2-1 - I2-2');
-subplot(3, 3, 6); imagesc(movDetectado2_2), title('Theta2 - Movimiento detectado entre imágenes I2-1 - I2-2');
+subplot(3, 3, 4); imagesc(iop2_2_T2), title('Theta2 - Operación OR entre imágenes I2-1 - I2-2');
+subplot(3, 3, 5); imagesc(mov2_2_T2), title('Theta2 - Umbralización entre imágenes I2-1 - I2-2');
+subplot(3, 3, 6); imagesc(movDetectado2_2_T2), title('Theta2 - Movimiento detectado entre imágenes I2-1 - I2-2');
 
-subplot(3, 3, 7); imagesc(iop2_3), title('Theta2 - Operación AND entre imágenes I2-1 - I2-2');
-subplot(3, 3, 8); imagesc(mov2_3), title('Theta2 - Umbralización entre imágenes I2-1 - I2-2');
-subplot(3, 3, 9); imagesc(movDetectado2_3), title('Theta2 - Movimiento detectado entre imágenes I2-1 - I2-2');
+subplot(3, 3, 7); imagesc(iop2_3_T2), title('Theta2 - Operación AND entre imágenes I2-1 - I2-2');
+subplot(3, 3, 8); imagesc(mov2_3_T2), title('Theta2 - Umbralización entre imágenes I2-1 - I2-2');
+subplot(3, 3, 9); imagesc(movDetectado2_3_T2), title('Theta2 - Movimiento detectado entre imágenes I2-1 - I2-2');
 colormap(gray);
 
 %% Operaciones para par 3 de imágenes Theta 2
@@ -318,13 +318,13 @@ iop3_1_T2 = iop(I3_1, I3_2, 1);
 iop3_2_T2 = iop(I3_1, I3_2, 2);
 iop3_3_T2 = iop(I3_1, I3_2, 3);
 
-mov3_1_T2 = mov(iop3_1_T2 ,Theta2, Condicion);
-mov3_2_T2 = mov(iop3_2_T2 ,Theta2, Condicion);
-mov3_3_T2 = mov(iop3_3_T2 ,Theta2, Condicion);
+mov3_1_T2 = mov(iop3_1_T2, Theta2, Condicion);
+mov3_2_T2 = mov(iop3_2_T2, Theta2, Condicion);
+mov3_3_T2 = mov(iop3_3_T2, Theta2, Condicion);
 
 movDetectado3_1_T2 = movDetectado(mov3_1_T2, I3_2, Color);
-movDetectado3_2_T2 = movDetectado(mov3_2, I3_2, Color);
-movDetectado3_3_T2 = movDetectado(mov3_3, I3_2, Color);
+movDetectado3_2_T2 = movDetectado(mov3_2_T2, I3_2, Color);
+movDetectado3_3_T2 = movDetectado(mov3_3_T2, I3_2, Color);
 
 figure;
 subplot(1, 2, 1); imagesc(I3_1), title('Imagen I3-1');
@@ -333,16 +333,16 @@ colormap(gray);
 
 figure;
 subplot(3, 3, 1); imagesc(iop3_1_T2), title('Theta2 - Substracción entre imágenes I3-1 - I3-2');
-subplot(3, 3, 2); imagesc(mov3_1), title('Theta2 - Umbralización entre imágenes I3-1 - I3-2');
+subplot(3, 3, 2); imagesc(mov3_1_T2), title('Theta2 - Umbralización entre imágenes I3-1 - I3-2');
 subplot(3, 3, 3); imagesc(movDetectado3_1_T2), title('Theta2 - Movimiento detectado entre imágenes I3-1 - I3-2');
 
 subplot(3, 3, 4); imagesc(iop3_2_T2), title('Theta2 - Operación OR entre imágenes I3-1 - I3-2');
-subplot(3, 3, 5); imagesc(mov3_2), title('Theta2 - Umbralización entre imágenes I3-1 - I3-2');
+subplot(3, 3, 5); imagesc(mov3_2_T2), title('Theta2 - Umbralización entre imágenes I3-1 - I3-2');
 subplot(3, 3, 6); imagesc(movDetectado3_2_T2), title('Theta2 - Movimiento detectado entre imágenes I3-1 - I3-2');
 
 subplot(3, 3, 7); imagesc(iop3_3_T2), title('Theta2 - Operación AND entre imágenes I3-1 - I3-2');
-subplot(3, 3, 8); imagesc(mov3_3), title('Theta2 - Umbralización entre imágenes I3-1 - I3-2');
-subplot(3, 3, 9); imagesc(movDetectado3_3), title('Theta2 - Movimiento detectado entre imágenes I3-1 - I3-2');
+subplot(3, 3, 8); imagesc(mov3_3_T2), title('Theta2 - Umbralización entre imágenes I3-1 - I3-2');
+subplot(3, 3, 9); imagesc(movDetectado3_3_T2), title('Theta2 - Movimiento detectado entre imágenes I3-1 - I3-2');
 colormap(gray);
 
 %% Operaciones para par 4 de imágenes Theta 2
@@ -350,9 +350,9 @@ iop4_1_T2 = iop(I4_1, I4_2, 1);
 iop4_2_T2 = iop(I4_1, I4_2, 2);
 iop4_3_T2 = iop(I4_1, I4_2, 3);
 
-mov4_1_T2 = mov(iop4_1_T2 ,Theta2, Condicion);
-mov4_2_T2 = mov(iop4_2_T2 ,Theta2, Condicion);
-mov4_3_T2 = mov(iop4_3_T2 ,Theta2, Condicion);
+mov4_1_T2 = mov(iop4_1_T2, Theta2, Condicion);
+mov4_2_T2 = mov(iop4_2_T2, Theta2, Condicion);
+mov4_3_T2 = mov(iop4_3_T2, Theta2, Condicion);
 
 movDetectado4_1_T2 = movDetectado(mov4_1_T2, I4_2, Color);
 movDetectado4_2_T2 = movDetectado(mov4_2_T2, I4_2, Color);
@@ -382,9 +382,9 @@ iop5_1_T2 = iop(I5_1, I5_2, 1);
 iop5_2_T2 = iop(I5_1, I5_2, 2);
 iop5_3_T2 = iop(I5_1, I5_2, 3);
 
-mov5_1_T2 = mov(iop5_1_T2 ,Theta2, Condicion);
-mov5_2_T2 = mov(iop5_2_T2 ,Theta2, Condicion);
-mov5_3_T2 = mov(iop5_3_T2 ,Theta2, Condicion);
+mov5_1_T2 = mov(iop5_1_T2, Theta2, Condicion);
+mov5_2_T2 = mov(iop5_2_T2, Theta2, Condicion);
+mov5_3_T2 = mov(iop5_3_T2, Theta2, Condicion);
 
 movDetectado5_1_T2 = movDetectado(mov5_1_T2, I5_2, Color);
 movDetectado5_2_T2 = movDetectado(mov5_2_T2, I5_2, Color);
@@ -421,26 +421,26 @@ imwrite(mov1_3_T2, strcat(RutaISalida, 'I1-T2-AND-Mov.jpg'));
 imwrite(movDetectado1_3_T2, strcat(RutaISalida, 'I1-T2-AND-movimientoDetectado.jpg'));
 
 %% Guardando imágenes 2 con Theta 2
-imwrite(iop2_1, strcat(RutaISalida, 'I2-T2-Substraccion-Iop.jpg'));
-imwrite(mov2_1, strcat(RutaISalida, 'I2-T2-Substraccion-Mov.jpg'));
-imwrite(movDetectado2_1, strcat(RutaISalida, 'I2-T2-Substraccion-movimientoDetectado.jpg'));
-imwrite(iop2_2, strcat(RutaISalida, 'I2-T2-OR-Iop.jpg'));
-imwrite(mov2_2, strcat(RutaISalida, 'I2-T2-OR-Mov.jpg'));
-imwrite(movDetectado2_2, strcat(RutaISalida, 'I2-T2-OR-movimientoDetectado.jpg'));
-imwrite(iop2_3, strcat(RutaISalida, 'I2-T2-AND-Iop.jpg'));
-imwrite(mov2_3, strcat(RutaISalida, 'I2-T2-AND-Mov.jpg'));
-imwrite(movDetectado2_3, strcat(RutaISalida, 'I2-T2-AND-movimientoDetectado.jpg'));
+imwrite(iop2_1_T2, strcat(RutaISalida, 'I2-T2-Substraccion-Iop.jpg'));
+imwrite(mov2_1_T2, strcat(RutaISalida, 'I2-T2-Substraccion-Mov.jpg'));
+imwrite(movDetectado2_1_T2, strcat(RutaISalida, 'I2-T2-Substraccion-movimientoDetectado.jpg'));
+imwrite(iop2_2_T2, strcat(RutaISalida, 'I2-T2-OR-Iop.jpg'));
+imwrite(mov2_2_T2, strcat(RutaISalida, 'I2-T2-OR-Mov.jpg'));
+imwrite(movDetectado2_2_T2, strcat(RutaISalida, 'I2-T2-OR-movimientoDetectado.jpg'));
+imwrite(iop2_3_T2, strcat(RutaISalida, 'I2-T2-AND-Iop.jpg'));
+imwrite(mov2_3_T2, strcat(RutaISalida, 'I2-T2-AND-Mov.jpg'));
+imwrite(movDetectado2_3_T2, strcat(RutaISalida, 'I2-T2-AND-movimientoDetectado.jpg'));
 
 %% Guardando imágenes 3 con Theta 2
 imwrite(iop3_1_T2, strcat(RutaISalida, 'I3-T2-Substraccion-Iop.jpg'));
-imwrite(mov3_1, strcat(RutaISalida, 'I3-T2-Substraccion-Mov.jpg'));
-imwrite(movDetectado3_1, strcat(RutaISalida, 'I3-T2-Substraccion-movimientoDetectado.jpg'));
+imwrite(mov3_1_T2, strcat(RutaISalida, 'I3-T2-Substraccion-Mov.jpg'));
+imwrite(movDetectado3_1_T2, strcat(RutaISalida, 'I3-T2-Substraccion-movimientoDetectado.jpg'));
 imwrite(iop3_2_T2, strcat(RutaISalida, 'I3-T2-OR-Iop.jpg'));
-imwrite(mov3_2, strcat(RutaISalida, 'I3-T2-OR-Mov.jpg'));
-imwrite(movDetectado3_2, strcat(RutaISalida, 'I3-T2-OR-movimientoDetectado.jpg'));
+imwrite(mov3_2_T2, strcat(RutaISalida, 'I3-T2-OR-Mov.jpg'));
+imwrite(movDetectado3_2_T2, strcat(RutaISalida, 'I3-T2-OR-movimientoDetectado.jpg'));
 imwrite(iop3_3_T2, strcat(RutaISalida, 'I3-T2-AND-Iop.jpg'));
-imwrite(mov3_3, strcat(RutaISalida, 'I3-T2-AND-Mov.jpg'));
-imwrite(movDetectado3_3, strcat(RutaISalida, 'I3-T2-AND-movimientoDetectado.jpg'));
+imwrite(mov3_3_T2, strcat(RutaISalida, 'I3-T2-AND-Mov.jpg'));
+imwrite(movDetectado3_3_T2, strcat(RutaISalida, 'I3-T2-AND-movimientoDetectado.jpg'));
 
 %% Guardando imágenes 4 con Theta 2
 imwrite(iop4_1_T2, strcat(RutaISalida, 'I4-T2-Substraccion-Iop.jpg'));
