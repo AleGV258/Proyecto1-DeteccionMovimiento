@@ -97,7 +97,7 @@ subplot(3, 3, 8); imagesc(mov2_3), title('Umbralización entre imágenes I2-1 - 
 subplot(3, 3, 9); imagesc(movDetectado2_3), title('Movimiento detectado entre imágenes I2-1 - I2-2');
 colormap(gray);
 
-%% Operaciónes para par 3 de imágenes Theta 1
+%% Operaciones para par 3 de imágenes Theta 1
 iop3_1 = iop(I3_1, I3_2, 1);
 iop3_2 = iop(I3_1, I3_2, 2);
 iop3_3 = iop(I3_1, I3_2, 3);
@@ -129,7 +129,7 @@ subplot(3, 3, 8); imagesc(mov3_3), title('Umbralización entre imágenes I3-1 - 
 subplot(3, 3, 9); imagesc(movDetectado3_3), title('Movimiento detectado entre imágenes I3-1 - I3-2');
 colormap(gray);
 
-%% Operaciónes para par 4 de imágenes Theta 1
+%% Operaciones para par 4 de imágenes Theta 1
 iop4_1 = iop(I4_1, I4_2, 1);
 iop4_2 = iop(I4_1, I4_2, 2);
 iop4_3 = iop(I4_1, I4_2, 3);
@@ -161,7 +161,7 @@ subplot(3, 3, 8); imagesc(mov4_3), title('Umbralización entre imágenes I4-1 - 
 subplot(3, 3, 9); imagesc(movDetectado4_3), title('Movimiento detectado entre imágenes I4-1 - I4-2');
 colormap(gray);
 
-%% Operaciónes para par 5 de imágenes Theta 1
+%% Operaciones para par 5 de imágenes Theta 1
 iop5_1 = iop(I5_1, I5_2, 1);
 iop5_2 = iop(I5_1, I5_2, 2);
 iop5_3 = iop(I5_1, I5_2, 3);
@@ -249,7 +249,7 @@ imwrite(mov5_3, strcat(RutaISalida, 'I5-T1-AND-Mov.jpg'));
 imwrite(movDetectado5_3, strcat(RutaISalida, 'I5-T1-AND-movimientoDetectado.jpg'));
 
 
-%% Operaciónes para par 1 de imágenes Theta 2
+%% Operaciones para par 1 de imágenes Theta 2
 iop1_1_T2 = iop(I1_1, I1_2, 1);
 iop1_2_T2 = iop(I1_1, I1_2, 2);
 iop1_3_T2 = iop(I1_1, I1_2, 3);
@@ -281,7 +281,7 @@ subplot(3, 3, 8); imagesc(mov1_3_T2), title('Theta2 - Umbralización entre imág
 subplot(3, 3, 9); imagesc(movDetectado1_3_T2), title('Theta2 - Movimiento detectado entre imágenes I1-1 - I1-2');
 colormap(gray);
 
-%% Operaciónes para par 2 de imágenes Theta 2
+%% Operaciones para par 2 de imágenes Theta 2
 iop2_1 = iop(I2_1, I2_2, 1);
 iop2_2 = iop(I2_1, I2_2, 2);
 iop2_3 = iop(I2_1, I2_2, 3);
@@ -313,7 +313,7 @@ subplot(3, 3, 8); imagesc(mov2_3), title('Theta2 - Umbralización entre imágene
 subplot(3, 3, 9); imagesc(movDetectado2_3), title('Theta2 - Movimiento detectado entre imágenes I2-1 - I2-2');
 colormap(gray);
 
-%% Operaciónes para par 3 de imágenes Theta 2
+%% Operaciones para par 3 de imágenes Theta 2
 iop3_1_T2 = iop(I3_1, I3_2, 1);
 iop3_2_T2 = iop(I3_1, I3_2, 2);
 iop3_3_T2 = iop(I3_1, I3_2, 3);
@@ -345,7 +345,7 @@ subplot(3, 3, 8); imagesc(mov3_3), title('Theta2 - Umbralización entre imágene
 subplot(3, 3, 9); imagesc(movDetectado3_3), title('Theta2 - Movimiento detectado entre imágenes I3-1 - I3-2');
 colormap(gray);
 
-%% Operaciónes para par 4 de imágenes Theta 2
+%% Operaciones para par 4 de imágenes Theta 2
 iop4_1_T2 = iop(I4_1, I4_2, 1);
 iop4_2_T2 = iop(I4_1, I4_2, 2);
 iop4_3_T2 = iop(I4_1, I4_2, 3);
@@ -377,7 +377,7 @@ subplot(3, 3, 8); imagesc(mov4_3_T2), title('Theta2 - Umbralización entre imág
 subplot(3, 3, 9); imagesc(movDetectado4_3_T2), title('Theta2 - Movimiento detectado entre imágenes I4-1 - I4-2');
 colormap(gray);
 
-%% Operaciónes para par 5 de imágenes Theta 2
+%% Operaciones para par 5 de imágenes Theta 2
 iop5_1_T2 = iop(I5_1, I5_2, 1);
 iop5_2_T2 = iop(I5_1, I5_2, 2);
 iop5_3_T2 = iop(I5_1, I5_2, 3);
